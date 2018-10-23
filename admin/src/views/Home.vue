@@ -21,6 +21,11 @@
             :index="index"
             :key="index">{{btn.text}}</render-dome>
         <render-ui :items="items"></render-ui>
+        <render-level :level="level">
+            <div>first</div>
+            <div>secnod</div>
+        </render-level>
+        <render-params></render-params>
     </div>
 </template>
 
@@ -38,7 +43,8 @@ export default {
         { type: "error", text: "error" },
         { type: "warn", text: "warning" },
         { type: "default", text: "default" }
-      ]
+      ],
+      level: 1
     };
   },
   created() {

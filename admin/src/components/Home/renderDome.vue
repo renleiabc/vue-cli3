@@ -1,7 +1,7 @@
 
 <script>
 export default {
-  render(createElement) {
+  render(h) {
     let item = {
       class: {
         btn: true,
@@ -19,7 +19,7 @@ export default {
         }
       }
     };
-    return createElement("div", item);
+    return h("div", item);
   },
   methods: {
     clickHandle(index) {
