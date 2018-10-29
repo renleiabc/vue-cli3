@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Home from "@/views/Home.vue";
 
 Vue.use(Router);
-
+// 路由导航
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
