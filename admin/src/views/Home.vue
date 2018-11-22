@@ -1,10 +1,5 @@
 <template>
     <div>
-        <div>
-            <router-link to='/'>home</router-link>
-            <router-link to='/about'>about</router-link>
-        </div>
-
         <input type="text"
             v-model="searchInputValue">
         <hello-world></hello-world>

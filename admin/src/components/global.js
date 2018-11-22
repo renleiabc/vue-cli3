@@ -16,6 +16,12 @@ const home = require.context(
   /\.vue$/
   //找到components文件夹下以.vue命名的文件
 );
+const simple = require.context(
+  "./simple",
+  true,
+  /\.vue$/
+  //找到components文件夹下以.vue命名的文件
+);
 
 function components(params) {
   params.keys().forEach(fileName => {
@@ -31,3 +37,5 @@ function components(params) {
 components(home);
 // about文件下的插件
 components(about);
+// about文件下的插件
+components(simple);

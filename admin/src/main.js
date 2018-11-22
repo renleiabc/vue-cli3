@@ -6,6 +6,9 @@ import "./components/global";
 import "./plugins/element";
 import mixin from "./util/mixin";
 import "animate.css/animate.min.css";
+import axios from "axios";
+import VueAxios from "vue-axios";
+Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;
 Vue.mixin(mixin);
 new Vue({

@@ -11,9 +11,7 @@
             <el-radio-button label="simple2"
                 @click="toSim(2)"><button>页面二</button></el-radio-button>
         </el-radio-group>
-        
-            <component :is="tabView"></component>
-       
+        <component :is="tabView"></component>
     </div>
 </template>
 

@@ -6,6 +6,8 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
+  linkActiveClass: "active-link",
+  linkExactActiveClass: "active-link-exact",
   base: process.env.BASE_URL,
   routes: [
     {
@@ -21,6 +23,20 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "@/views/About.vue")
+    },
+    {
+      name: "algorithm",
+      path: "/algorithm",
+      component: () => {
+        return import("@/views/algorithm.vue");
+      }
+    },
+    {
+      name: "component",
+      path: "/component",
+      component: () => {
+        return import("../views/component.vue");
+      }
     }
   ]
 });
