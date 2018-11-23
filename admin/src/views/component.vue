@@ -25,26 +25,21 @@
             <div class="demo-select-box"
                 v-show="select">
                 <el-scrollbar style="height:100%;">
-                    <ul>
-                        <li>SassASAs</li>
-                        <li>asdasda</li>
-                        <li>asdasd</li>
-                        <li>asdasd</li>
-                        <li>asdasdas</li>
-                        <li>asdasda</li>
-                        <li>asdasd</li>
-                        <li>asdasd</li>
-                        <li>asdasdas</li>
-                        <li>asdasda</li>
-                        <li>asdasd</li>
-                        <li>asdasd</li>
-                        <li>asdasdas</li>
+                    <ul @click="valueClick"
+                        @mouseenter="enter"
+                        @mouseleave="leave">
+                        <li v-if="selectData.length ===0">
+                            暂无数据
+                        </li>
+                        <li v-for="(item,index) in selectData"
+                            :key="index"
+                            @mousedown="selectClick(index)">
+                            {{item.label}}
+                        </li>
                     </ul>
                 </el-scrollbar>
-
             </div>
         </div>
-
         <div>
             <el-select v-model="value9"
                 filterable
@@ -60,6 +55,15 @@
                 </el-option>
             </el-select>
         </div>
+        <div class="home-link">
+            <router-link v-for="(item) in dataLink"
+                :key="item.id"
+                :to="{name:'a',params:{id:item.id}}" >组件{{item.name}}</router-link>
+        </div>
+        <div>
+            <!-- 通俗点来讲,就是一个列表项要有一个key值,这个key值如果唯一且未发生变化,则dom就会被复用,反之则需要重新生成-->
+            <router-view :key="$route.path"></router-view>
+        </div>
     </div>
 </template>
 
@@ -74,20 +78,35 @@ export default {
       list: [],
       loading: false,
       select: false,
-      states: ["Alabama"]
+      states: ["Alabama"],
+      selectData: [],
+      dataLink: [{ name: "A", id: "a" }, { name: "B", id: "b" }]
     };
   },
-  created() {},
+  created() {
+    // console.log(this.$route);
+  },
   mounted() {
     this.list = this.states.map(item => {
       return { value: item, label: item };
     });
   },
   methods: {
+    enter() {
+      // console.log("++++++s");
+      //  this.select = true;
+    },
+    leave() {
+      // this.select = false;
+    },
+    valueClick() {
+      // console.log("++++++s");
+    },
     selectBlur() {
       this.select = false;
     },
     selectFocus() {
+      //  this.getSelect();
       this.select = true;
     },
     toSim(index) {
@@ -107,6 +126,16 @@ export default {
       } else {
         this.options4 = [];
       }
+    },
+    getSelect() {
+      this.axios.get("select").then(res => {
+        // console.log(JSON.stringify(res));
+        this.selectData = res.data.data;
+      });
+    },
+    selectClick(index) {
+      console.log(index);
+      this.serchInputValue = this.selectData[index].label;
     }
   },
   components: {},
@@ -115,8 +144,9 @@ export default {
     value9(newVal, oldVal) {
       console.log(newVal);
     },
-    serchInputValue(newVal, oldVal) {
-      console.log(newVal);
+    serchInputValue: {
+      handler: "getSelect",
+      immediate: true
     }
   }
 };

@@ -35,8 +35,17 @@ export default new Router({
       name: "component",
       path: "/component",
       component: () => {
-        return import("../views/component.vue");
-      }
+        return import("@/views/component.vue");
+      },
+      children: [
+        {
+          name: "a",
+          path: "post-page/:id",
+          component: () => {
+            return import("@/views/demoA.vue");
+          }
+        }
+      ]
     }
   ]
 });

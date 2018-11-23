@@ -8,7 +8,8 @@ import mixin from "./util/mixin";
 import "animate.css/animate.min.css";
 import axios from "axios";
 import VueAxios from "vue-axios";
-Vue.use(VueAxios, axios);
+import service from "./plugins/http";
+Vue.use(VueAxios, service, axios);
 Vue.config.productionTip = false;
 Vue.mixin(mixin);
 new Vue({
