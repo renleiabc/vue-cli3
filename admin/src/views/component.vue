@@ -17,6 +17,7 @@
         </keep-alive>
         <div class="demo-select">
             <span class="demo-title">监听：</span>
+            <input type="text"  class="demo-input" @input="handleValue($event)">
             <input type="text"
                 v-model="serchInputValue"
                 class="demo-input"
@@ -58,12 +59,20 @@
         <div class="home-link">
             <router-link v-for="(item) in dataLink"
                 :key="item.id"
-                :to="{name:'a',params:{id:item.id}}" >组件{{item.name}}</router-link>
+                :to="{name:'a',params:{id:item.id}}">组件{{item.name}}</router-link>
         </div>
+        
         <div>
             <!-- 通俗点来讲,就是一个列表项要有一个key值,这个key值如果唯一且未发生变化,则dom就会被复用,反之则需要重新生成-->
             <router-view :key="$route.path"></router-view>
         </div>
+        <!-- 父组件 -->
+        <base-input :value="value"
+            label="密码"
+            placeholder="请填写密码"
+            @input="handleInput"
+            >
+        </base-input>
     </div>
 </template>
 
@@ -80,7 +89,8 @@ export default {
       select: false,
       states: ["Alabama"],
       selectData: [],
-      dataLink: [{ name: "A", id: "a" }, { name: "B", id: "b" }]
+      dataLink: [{ name: "A", id: "a" }, { name: "B", id: "b" }],
+      value: ""
     };
   },
   created() {
@@ -92,6 +102,15 @@ export default {
     });
   },
   methods: {
+    handleInput(val) {
+      console.log(val.target.value);
+    },
+    handleFouce(val) {
+      console.log(val.target.value);
+    },
+    handleValue(val) {
+      console.log(val.target.value);
+    },
     enter() {
       // console.log("++++++s");
       //  this.select = true;

@@ -2,7 +2,7 @@
 <template>
   <div>
       组件的子页面{{id}}
-      <render-jsx :titles="title"></render-jsx>
+       <render-jsx :titles="title"></render-jsx>
       </div>
 </template>
 

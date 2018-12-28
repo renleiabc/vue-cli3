@@ -32,6 +32,20 @@ export default new Router({
       }
     },
     {
+      name: "canvas",
+      path: "/canvas",
+      component: () => {
+        return import("@/views/canvas.vue");
+      }
+    },
+    {
+      name: "time",
+      path: "/time",
+      component: () => {
+        return import("@/views/time.vue");
+      }
+    },
+    {
       name: "component",
       path: "/component",
       component: () => {

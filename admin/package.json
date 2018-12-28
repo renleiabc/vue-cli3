@@ -10,9 +10,6 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
     "element-ui": "^2.4.5",
     "style-resources-loader": "^1.2.1",
@@ -21,6 +18,7 @@
     "vue": "^2.5.17",
     "vue-axios": "^2.1.4",
     "vue-router": "^3.0.1",
+    "vue-skeleton-webpack-plugin": "^1.2.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

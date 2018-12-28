@@ -1,4 +1,8 @@
 const path = require("path");
+const SkeletonWebpackPlugin = require("vue-skeleton-webpack-plugin");
+function resolve(dir) {
+  return path.join(__dirname, "..", dir);
+}
 module.exports = {
   // 选项...
   assetsDir: "assets",
@@ -21,7 +25,14 @@ module.exports = {
   // webpack配置
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   chainWebpack: () => {},
-  configureWebpack: () => {},
+  configureWebpack: {
+    plugins: [
+      new SkeletonWebpackPlugin({
+        webpackConfig: require("./src/webpack.skeleton.conf"),
+        quiet: true
+      })
+    ]
+  },
   // vue-loader 配置项
   // https://vue-loader.vuejs.org/en/options.html
   //vueLoader: {},
