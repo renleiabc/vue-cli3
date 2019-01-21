@@ -28,35 +28,35 @@ export default new Router({
       name: "algorithm",
       path: "/algorithm",
       component: () => {
-        return import("@/views/algorithm.vue");
+        import(/* webpackChunkName: "algorithm" */ "@/views/algorithm.vue");
       }
     },
     {
       name: "canvas",
       path: "/canvas",
       component: () => {
-        return import("@/views/canvas.vue");
+        import(/* webpackChunkName: "canvas" */ "@/views/canvas.vue");
       }
     },
     {
       name: "time",
       path: "/time",
       component: () => {
-        return import("@/views/time.vue");
+        import(/* webpackChunkName: "time" */ "@/views/time.vue");
       }
     },
     {
       name: "component",
       path: "/component",
       component: () => {
-        return import("@/views/component.vue");
+        import(/* webpackChunkName: "component" */ "@/views/component.vue");
       },
       children: [
         {
           name: "a",
           path: "post-page/:id",
           component: () => {
-            return import("@/views/demoA.vue");
+            import(/* webpackChunkName: "demoA" */ "@/views/demoA.vue");
           }
         }
       ]

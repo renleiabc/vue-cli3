@@ -18,6 +18,9 @@
         <render-ui :items="items"></render-ui>
         <slot-dome></slot-dome>
         <check-dome></check-dome>
+        <span>{{num}}</span>
+        <button @click="updateDom">update</button>
+        <slot-com :datas = "testData">asdas</slot-com>
     </div>
 </template>
 
@@ -29,6 +32,7 @@ export default {
       searchInputValue: "",
       i: 1,
       value: "",
+      num: 0,
       items: [{ name: "firts" }, { name: "second" }],
       testData: [
         { type: "success", text: "success" },
@@ -41,10 +45,36 @@ export default {
   created() {
     // console.log(process.env.VUE_APP_SECRET);
   },
+  //数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。
+  beforeUpdate: function() {
+    console.group("beforeUpdate 更新前状态===============》");
+    console.log("%c%s", "color:red", "el     : " + this.$el);
+    console.log(this.$el);
+    console.log("%c%s", "color:red", "data   : " + this.$data);
+    console.log("%c%s", "color:red", "message: " + this.message);
+  },
+  updated: function() {
+    console.group("updated 更新完成状态===============》");
+    console.log("%c%s", "color:red", "el     : " + this.$el);
+    console.log(this.$el);
+    console.log("%c%s", "color:red", "data   : " + this.$data);
+    console.log("%c%s", "color:red", "message: " + this.message);
+  },
+  //实例销毁之前调用。在这一步，实例仍然完全可用。
+  beforeDestroy() {
+    console.group("beforeDestroy 销毁前状态===============》");
+  },
+  //Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁
+  destroyed() {
+    console.group("destroyed 销毁完成状态===============》");
+  },
   methods: {
     fetchPostList() {
       this.i++;
       console.log(this.i);
+    },
+    updateDom() {
+      this.num++;
     },
     handleInput(val) {
       console.log(val);

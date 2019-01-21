@@ -11,6 +11,11 @@ import VueAxios from "vue-axios";
 import service from "./plugins/http";
 Vue.use(VueAxios, service, axios);
 Vue.config.productionTip = false;
+Vue.config.errorHandler = function(err, vm, info) {
+  console.group(err);
+  console.group(vm);
+  console.group(info);
+};
 Vue.mixin(mixin);
 new Vue({
   router,
