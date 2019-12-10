@@ -2,14 +2,16 @@
 <template>
   <div>
     <div v-for="(item,index) in datas"
-      :key="index">
-      {{item}}red
+      :key="index" class="wow slideInLeft">
+      {{item.type}}red
     </div>
   </div>
 
 </template>
 
 <script>
+import { WOW } from "wowjs";
+
 export default {
   data() {
     return {};
@@ -20,11 +22,32 @@ export default {
     console.group(vm);
     console.group(info);
   },
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      // 在dom渲染完后,再执行动画
+      var wow = new WOW({
+        live: true,
+        offset: 200
+      });
+      wow.init();
+    });
+  },
   methods: {},
   components: {},
   computed: {},
-  props: ["datas"]
+  props: ["datas"],
+  watch: {
+    datas() {
+      this.$nextTick(() => {
+        // 在dom渲染完后,再执行动画
+        var wow = new WOW({
+          live: true,
+          offset: 200
+        });
+        wow.init();
+      });
+    }
+  }
 };
 </script>
 <style  scoped>

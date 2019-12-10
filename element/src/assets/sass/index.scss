@@ -1,0 +1,10 @@
+$--color-primary:blue;
+.block {
+    width: 300px;
+    height: 300px;
+
+    .block-element {
+        background: red;
+        color:$--color-primary;
+    }
+}

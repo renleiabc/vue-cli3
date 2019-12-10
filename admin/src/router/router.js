@@ -27,36 +27,43 @@ export default new Router({
     {
       name: "algorithm",
       path: "/algorithm",
-      component: () => {
-        import(/* webpackChunkName: "algorithm" */ "@/views/algorithm.vue");
+      component: resolve => {
+        require(["@/views/algorithm.vue"], resolve);
       }
     },
     {
       name: "canvas",
       path: "/canvas",
-      component: () => {
-        import(/* webpackChunkName: "canvas" */ "@/views/canvas.vue");
+      component: resolve => {
+        require(["@/views/canvas.vue"], resolve);
       }
     },
     {
       name: "time",
       path: "/time",
-      component: () => {
-        import(/* webpackChunkName: "time" */ "@/views/time.vue");
+      component: resolve => {
+        require(["@/views/time.vue"], resolve);
+      }
+    },
+    {
+      name: "upload",
+      path: "/upload",
+      component: resolve => {
+        require(["@/views/upload.vue"], resolve);
       }
     },
     {
       name: "component",
       path: "/component",
-      component: () => {
-        import(/* webpackChunkName: "component" */ "@/views/component.vue");
+      component: resolve => {
+        require(["@/views/component.vue"], resolve);
       },
       children: [
         {
           name: "a",
           path: "post-page/:id",
-          component: () => {
-            import(/* webpackChunkName: "demoA" */ "@/views/demoA.vue");
+          component: resolve => {
+            require(["@/views/demoA.vue"], resolve);
           }
         }
       ]

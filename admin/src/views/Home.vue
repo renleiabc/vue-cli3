@@ -1,30 +1,43 @@
 <template>
-    <div>
-        <input type="text"
-            v-model="searchInputValue">
-        <hello-world></hello-world>
-        <hello-dome :value="value"
-            label="密码"
-            placeholder="请填写密码"
-            @input="handleInput"
-            @focuVal="handleFocus">
-        </hello-dome>
-        <getters-demo></getters-demo>
-        <render-dome v-for="(btn, index) in testData"
-            :type="btn.type"
-            :text="btn.text"
-            :index="index"
-            :key="index">{{btn.text}}</render-dome>
-        <render-ui :items="items"></render-ui>
-        <slot-dome></slot-dome>
-        <check-dome></check-dome>
-        <span>{{num}}</span>
-        <button @click="updateDom">update</button>
-        <slot-com :datas = "testData">asdas</slot-com>
+  <div>
+    <input type="text"
+      v-model="searchInputValue">
+    <hello-world></hello-world>
+    <hello-dome :value="value"
+      label="密码"
+      placeholder="请填写密码"
+      @input="handleInput"
+      @focuVal="handleFocus">
+    </hello-dome>
+    <getters-demo></getters-demo>
+    <render-dome v-for="(btn, index) in testData"
+      :type="btn.type"
+      :text="btn.text"
+      :index="index"
+      :key="index">{{btn.text}}</render-dome>
+    <render-ui :items="items"></render-ui>
+    <slot-dome></slot-dome>
+    <check-dome></check-dome>
+    <span>{{num}}</span>
+    <button @click="updateDom">update</button>
+
+    <div class="wow slideInUp wow-div">
+
     </div>
+    <slot-com :datas="testData">asdas</slot-com>
+    <el-select v-model="value1"
+      placeholder="请选择">
+      <el-option v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+  </div>
 </template>
 
 <script>
+import { WOW } from "wowjs";
 export default {
   name: "home",
   data() {
@@ -39,7 +52,30 @@ export default {
         { type: "error", text: "error" },
         { type: "warn", text: "warning" },
         { type: "default", text: "default" }
-      ]
+      ],
+      options: [
+        {
+          value: "选项1",
+          label: "黄金糕"
+        },
+        {
+          value: "选项2",
+          label: "双皮奶"
+        },
+        {
+          value: "选项3",
+          label: "蚵仔煎"
+        },
+        {
+          value: "选项4",
+          label: "龙须面"
+        },
+        {
+          value: "选项5",
+          label: "北京烤鸭"
+        }
+      ],
+      value1: ""
     };
   },
   created() {
@@ -87,6 +123,15 @@ export default {
     searchInputValue: {
       handler: "fetchPostList",
       immediate: true // 首先，在watchers中，可以直接使用函数的字面量名称；其次，声明immediate:true表示创建组件时立马执行一次。
+    },
+    cases() {
+      this.$nextTick(() => {
+        // 在dom渲染完后,再执行动画
+        var wow = new WOW({
+          live: false
+        });
+        wow.init();
+      });
     }
   },
   components: {}

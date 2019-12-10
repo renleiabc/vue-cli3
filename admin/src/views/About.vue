@@ -1,8 +1,8 @@
 <template>
-    <div class="animated bounceInRight yourElement">
+  <!--   <div class="animated bounceInRight yourElement">
         <h2>sdasddsadas</h2>
         <h1>This is an about page</h1>
-    </div>
+    </div> -->
     <!-- <div>
     <el-form-item label="时间选择"
       prop="addTime">
@@ -18,6 +18,7 @@
       </el-date-picker>
     </el-form-item>
   </div> -->
+  <div>sadadas</div>
 </template>
 <script>
 export default {

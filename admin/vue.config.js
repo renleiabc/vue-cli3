@@ -1,5 +1,6 @@
 const path = require("path");
 const SkeletonWebpackPlugin = require("vue-skeleton-webpack-plugin");
+const webpack = require("webpack");
 function resolve(dir) {
   return path.join(__dirname, "..", dir);
 }
@@ -30,6 +31,10 @@ module.exports = {
       new SkeletonWebpackPlugin({
         webpackConfig: require("./src/webpack.skeleton.conf"),
         quiet: true
+      }),
+      new webpack.ProvidePlugin({
+        "window.Quill": "quill/dist/quill.js",
+        Quill: "quill/dist/quill.js"
       })
     ]
   },
