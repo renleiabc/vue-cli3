@@ -1,0 +1,1199 @@
+/*
+ * @Author:任雷雷
+ * @Date: 2018-07-12 10:04:31
+ * @LastEditors: 少侠
+ * @LastEditTime: 2018-08-22 14:28:00
+ * @Description:项目空间的样式表
+ */
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+li {
+    display: block;
+    margin: 0;
+}
+
+//变量设置
+@color: #c9c9c9;
+@orange: #f49900;
+@blue: #417dd0;
+.input-text {
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+
+.input-btn {
+    height: 30px;
+    padding: 5px 20px;
+    border: 1px solid @orange;
+    background: #feebcb;
+}
+
+.views-project-space {
+    padding: 0 10px;
+    font-size: 14px;
+    .tab-select {
+        margin-top: 20px;
+        .views-text-name {
+            width: 100px;
+        }
+        .views-text-title {
+            width: 100px;
+        }
+    }
+}
+
+.views-input-box {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    .el-input__icon {
+        line-height: 0;
+        color: @color;
+    }
+    .el-date-editor .el-range-separator {
+        height: auto;
+    }
+}
+
+.views-margin {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.views-input-box {
+    .el-input__inner {
+        .input-text;
+    }
+}
+
+.views-date .el-input__icon {
+    line-height: 0;
+    color: @color;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.views-input-text {
+    .input-text;
+    width: 217px;
+}
+
+.views-button {
+    .input-btn;
+    color: #f7bc6e;
+}
+
+.views-margin-btn {
+    margin-left: 30px;
+}
+
+.views-table-btn {
+    margin-bottom: 20px;
+    float: right;
+    .views-button {
+        background: @orange;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.views-table-project {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .views-button {
+        background: @orange;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.views-table-content {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.views-table-link {
+    color: @blue;
+    cursor: pointer;
+}
+
+.views-project-file {
+    color: @blue;
+}
+
+.views-box {
+    margin-bottom: 20px;
+}
+
+.views-table-span {
+    color: @blue;
+    cursor: pointer;
+}
+
+.views-table-margin {
+    margin-right: 10px;
+}
+
+.views-text-name {
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+    font-size: 14px;
+}
+
+.views-develop {
+    overflow: hidden;
+    margin-top: 20px;
+    li {
+        float: left;
+        margin-left: 5px;
+        a {
+            margin-right: 5px;
+            color: @color;
+        }
+        .develop-link {
+            color: blue;
+        }
+    }
+}
+
+.views-page {
+    text-align: center;
+    margin-top: 30px;
+    .el-pager li.active {
+        color: @orange;
+        cursor: default;
+    }
+}
+
+.table-td {
+    width: 200px;
+    padding-right: 20px;
+}
+
+//项目详情表格数据
+.views-project-details {
+    width: calc(100% - 20px);
+    margin: 0 10px 0 10px;
+    font-size: 14px;
+    tr {
+        border-bottom: 1px dashed #ebebeb;
+        td {
+            height: 34px;
+            line-height: 34px;
+            padding-left: 20px;
+            &:first-child {
+                .table-td;
+            }
+            &:nth-child(3) {
+                .table-td;
+            }
+        }
+    }
+}
+
+.views-personal {
+    .views-project-details {
+        margin-top: 25px;
+    }
+}
+
+.views-table-margin {
+    margin-left: 10px;
+}
+
+.views-table-color {
+    color: @orange;
+}
+
+.views-development {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    font-size: 14px;
+    .el-tabs__item {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+    .el-tabs__nav-scroll {
+        padding: 0 20px;
+    }
+    .el-tabs__active-bar {
+        height: 3px;
+    }
+}
+
+.icon-font {
+    width: 20px;
+    display: inline-block;
+    text-align: right;
+    font-size: 15px;
+}
+
+.views-icon-stop {
+    color: @orange;
+    .icon-font;
+}
+
+.views-icon-kaifa {
+    color: #14b2ed;
+    .icon-font;
+}
+
+.views-icon-yiguidang {
+    color: #6c6ec1;
+    .icon-font;
+}
+
+.views-icon-yunhangzhong {
+    color: #21bb85;
+    .icon-font;
+}
+
+.views-icon-warning {
+    color: #fc3145;
+    .icon-font;
+}
+
+.views-icon-error {
+    color: #fc3044;
+    .icon-font;
+}
+
+.views-icon-chuangjian {
+    color: #14b2ef;
+    .icon-font;
+}
+
+.views-icon-yichang {
+    color: #f27573;
+    .icon-font;
+}
+
+.views-icon-project {
+    color: @orange;
+    .icon-font;
+}
+
+.views-icon-yiguanbi {
+    color: #f1817d;
+    .icon-font;
+}
+
+.views-icon-shanchu {
+    color: #6d556f;
+    .icon-font;
+}
+
+.views-icon-success {
+    color: #5495ed;
+    .icon-font;
+}
+
+//创建开发环境
+.views-personal {
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    padding: 0 20px;
+}
+
+.views-header-inf {
+    border-bottom: 1px solid rgba(225, 221, 221, 1);
+    margin-top: 30px;
+    span {
+        color: @orange;
+        border-bottom: 2px solid @orange;
+        padding-bottom: 7px;
+        display: inline-block;
+    }
+}
+
+.views-develop-inf {
+    overflow: hidden;
+    width: 100%;
+    .views-develop-text {
+        float: left;
+        width: 45%;
+        padding-right: 5%;
+    }
+}
+
+.views-develop-input {
+    margin-top: 25px;
+    .el-input {
+        .el-input__inner {
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-develop-select {
+    margin-top: 25px;
+    .el-input__icon {
+        line-height: 0;
+    }
+    .el-select {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        .el-input__inner {
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-task-mb {
+    .el-form-item__content {
+        margin-bottom: 20px;
+    }
+}
+
+.views-develop-image {
+    margin-top: 25px;
+    .views-develop-choice {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        .el-input {
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+        .view-btn-medium {
+            margin-left: 1%;
+        }
+        .views-btn-reduce {
+            width: 50px;
+            margin-left: 10px;
+        }
+        .views-btn-choice {
+            margin-left: auto;
+        }
+    }
+    .views-span {
+        float: left;
+    }
+}
+
+.views-model-job {
+    .views-develop-choice {
+        .el-form-item {
+            width: 48%;
+            .el-input {
+                width: 100%;
+            }
+        }
+        .el-input {
+            width: 48%;
+            .el-input__inner {
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-icon-ruleForm {
+    .el-form-item__label {
+        padding: 0 3px 0 0;
+        padding-right: 20px;
+    }
+    .views-develop-resources .el-form-item {
+        width: 38%;
+        .el-select {
+            width: 88%;
+        }
+    }
+}
+
+.views-develop-image {
+    position: relative;
+    .views-icon-group {
+        position: absolute;
+        left: 102px;
+        top: 15px;
+        font-size: 12px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .views-develop-choice {
+        width: 70%;
+    }
+}
+
+.views-develop-params {
+    width: 70%;
+}
+
+.views-develop-caffe {
+    width: 50%;
+    float: left;
+    margin-bottom: 25px;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .views-task-sign {
+        float: none;
+        display: inline-block;
+    }
+    .el-input {
+        width: 45%;
+    }
+}
+
+.views-task-tips {
+    position: absolute;
+    top: 43px;
+    left: 53%;
+    color: #f56c6c;
+    font-size: 12px;
+    z-index: 10000;
+    height: 20px;
+    line-height: 20px;
+}
+
+.views-develop-text {
+    .views-develop-image {
+        .views-develop-choice {
+            width: 100%;
+        }
+    }
+}
+
+.views-develop-mount {
+    margin-top: 25px;
+    .el-input {
+        width: 30%;
+        margin: 0 10px;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+    .views-mount-span {
+        color: red;
+        font-size: 12px;
+        margin-left: 12px;
+        display: inline-block;
+        font-weight: bolder;
+    }
+}
+
+.views-btn-reduce {
+    text-align: center;
+    color: #fff;
+    background: @orange;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.views-develop-resources {
+    margin-top: 25px;
+    .el-input__icon {
+        line-height: 0;
+    }
+    .el-form-item {
+        display: inline-block;
+        margin-bottom: 0;
+        .el-select {
+            display: inline-block;
+            position: relative;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+    span:not(:first-child) {
+        display: inline-block;
+        width: 10%;
+        text-align: right;
+    }
+}
+
+.views-develop-btn {
+    margin: 6% 0;
+    text-align: center;
+} //创建训练任务
+.views-task-input {
+    margin-top: 25px;
+    .el-input {
+        width: 70%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-task-vis {
+    display: inline-block;
+    margin-left: 5px;
+    .el-radio+.el-radio {
+        margin-left: 5px;
+    }
+}
+
+.views-task-image {
+    margin-top: 25px;
+    .views-span {
+        float: left;
+    }
+    .el-textarea {
+        width: 70%;
+    }
+}
+
+.views-task-small {
+    margin-top: 25px;
+    .el-input {
+        width: 25%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+    .views-task-radio {
+        width: 150px;
+        display: inline-block;
+        text-align: right;
+    }
+    .el-select {
+        width: 25%;
+        .el-input {
+            width: 100%;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-task-span {
+    width: 120px;
+    text-align: right;
+    display: inline-block;
+    .views-task-icon {
+        margin-right: 5px;
+        color: @orange;
+    }
+    .views-task-second {
+        margin-left: 10px;
+        margin-right: 5px;
+        color: @orange;
+    }
+    .views-icon-group {
+        font-size: 12px;
+    }
+}
+
+.views-task-span-mg {
+    width: 85px;
+    margin-left: 10px;
+    float: left;
+}
+
+.views-task-middle {
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.views-task-ml {
+    margin-right: 20px;
+}
+
+.views-task-div {
+    display: inline-block;
+    width: 70%;
+    .el-input {
+        width: 90%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-model-task {
+    width: 70%;
+}
+
+.views-task-right {
+    width: 75%;
+    margin-left: 150px;
+    margin-top: 25px;
+    .views-task-params {
+        display: inline-block;
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        margin-bottom: 18px;
+        span {
+            margin-top: 5px;
+        }
+        .el-input {
+            width: 45%;
+            float: left;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-model-params {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 18px;
+    span {
+        margin-top: 5px;
+    }
+    .views-task-sign {
+        width: 4%;
+    }
+    .el-input {
+        width: 48%;
+        float: left;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-task-run {
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.views-task-sign {
+    width: 5%;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.views-task-border {
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+}
+
+.views-task-sitting-mg {
+    margin: 10px 0;
+    margin-left: 8%;
+}
+
+.views-task-sitting {
+    height: 64px;
+    line-height: 64px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 85%;
+    background: #e0e0e0;
+    position: relative;
+    .views-task-tips {
+        left: 55px;
+        top: 50px;
+    }
+    .views-node-input {
+        width: 14%;
+    }
+    .el-select {
+        width: 14%;
+        .el-input {
+            width: 100%;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+    .views-task-cpu {
+        display: inline-block;
+        width: 50px;
+        text-align: right;
+    }
+}
+
+.views-task-type {
+    overflow: hidden;
+}
+
+.views-task-node {
+    margin-top: 10px;
+    .views-task-node-span {
+        float: left;
+        width: 100px;
+        height: 64px;
+        line-height: 64px;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.views-task-bottom {
+    margin-bottom: 10px;
+}
+
+.views-code-left,
+.views-code-right {
+    float: left;
+}
+
+.views-code-left {
+    width: 38%;
+    .views-code-list {
+        height: 25px;
+        display: block;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        .el-radio__label {
+            padding-left: 0;
+        }
+    }
+}
+
+.views-code-right {
+    width: 60%;
+    height: 300px;
+    border: 1px solid @orange;
+    .views-code-tree {
+        padding: 10px;
+    }
+    .views-code-box {
+        width: 250px;
+        height: 300px;
+    }
+} //开发环境详情
+.views-basic-color1 {
+    background: #e4e4e4;
+}
+
+.views-basic-color2 {
+    background: #d4d4d4;
+}
+
+.views-basic-color3 {
+    background: #efefef;
+}
+
+.views-basic-name {
+    .el-input.is-disabled .el-input__inner {
+        background: #fff;
+        color: #5f5f5f;
+        cursor: not-allowed;
+    }
+    .el-input {
+        width: 90%;
+        .el-input__inner {
+            border: none;
+            padding: 0;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 0;
+            font-size: 14px;
+        }
+    }
+}
+
+.views-icon-edit {
+    font-size: 24px;
+    color: #f49900;
+    cursor: pointer;
+}
+
+.views-tabel-details {
+    tr {
+        td {
+            width: 33%;
+        }
+    }
+}
+
+.views-dialog {
+    .el-dialog__header {
+        padding: 10px 20px 10px;
+        background: #f49900;
+        .el-dialog__title {
+            color: #fff;
+        }
+        .el-dialog__headerbtn {
+            top: 15px;
+        }
+    }
+    .el-dialog__header .el-dialog__headerbtn:hover .el-dialog__close {
+        color: #fff;
+    }
+}
+
+.views-dialog-develop {
+    width: 100%;
+    text-align: center;
+    .tab-select-title {
+        margin-right: 10px;
+    }
+    .el-select {
+        width: 320px;
+        .el-input {
+            width: 100%;
+            .el-input__icon {
+                line-height: 0;
+            }
+            .el-input__inner {
+                height: 32px;
+                line-height: 32px;
+            }
+        }
+    }
+    .views-dialog-name {
+        margin-right: 2%;
+        display: inline-block;
+    }
+    .el-textarea {
+        width: 80%;
+    }
+}
+
+.views-dialog-loading {
+    .el-select {
+        width: 350px;
+    }
+}
+
+.views-develop-edit {
+    padding: 10px 0;
+    overflow: hidden;
+    i {
+        float: right;
+    }
+}
+
+.views-develop-remarks {
+    .el-textarea.is-disabled .el-textarea__inner {
+        background: #fff;
+        color: #5f5f5f;
+    }
+}
+
+.views-dialog-remarks {
+    float: left;
+    margin-right: 2%;
+}
+
+.views-charts-mt {
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative;
+    .views-chats-times {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        z-index: 10000;
+        .el-select {
+            width: 200px;
+            .el-input {
+                width: 100%;
+                .el-input__inner {
+                    width: 100%;
+                    height: 32px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .el-input__icon {
+        line-height: 0;
+    }
+}
+
+.views-task-show {
+    display: inline-block;
+    margin-left: 10px;
+} //训练日志详情
+.views-task-news {
+    margin-top: 10px;
+    overflow: hidden;
+    .views-task-select {
+        float: right;
+        .el-select {
+            width: 200px;
+            .el-input {
+                width: 100%;
+                .el-input__inner {
+                    width: 100%;
+                    height: 34px;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+    .el-input__icon {
+        line-height: 0;
+    }
+}
+
+.views-task-text {
+    font-size: 12px;
+    color: #b7b7b7;
+    margin-bottom: 10px;
+}
+
+.views-task-log {
+    border: 2px solid #c9c9c9;
+    height: 200px;
+    border-radius: 4px;
+    .veiws-text-log {
+        padding: 20px 15px;
+        .views-text-span {
+            margin-bottom: 20px;
+            span:first-child {
+                color: red;
+            }
+        }
+    }
+}
+
+.views-table-details {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.views-charts-box {
+    width: 100%;
+    overflow: hidden;
+    .views-charts-task {
+        width: 50%;
+        float: left;
+        margin-bottom: 10px;
+        .views-chats-times {
+            top: 25px;
+        }
+    }
+}
+
+.views-node-name {
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.views-model-load {
+    margin-top: 10px;
+} // 项目设置
+.views-project-setting {
+    display: inline-block;
+    width: 95px;
+    text-align: right;
+}
+
+.views-select-mirror {
+    .el-radio__label {
+        padding-left: 0;
+    }
+}
+
+.views-picture-box {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.views-dialog {
+    .el-input {
+        width: 70%;
+    }
+} // 挂载存储地址
+.views-code-storage {
+    color: #323232;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    &:hover {
+        background: #ffefd5;
+    }
+    .views-icon-project {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+}
+
+.views-code-select {
+    background: #ffefd5;
+}
+
+.views-code-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/*图片预测样式*/
+
+.pictureTrain {
+    display: flex;
+    >div {
+        width: 48%;
+        &:nth-child(1) {
+            padding-right: 2%;
+            border-right: 1px dashed #e4e4e4;
+        }
+        &:nth-child(2) {
+            padding-left: 2%;
+        }
+    }
+    h6 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    p {
+        line-height: 200%;
+        color: #666666;
+    }
+    .avatar-uploader .el-upload {
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .avatar-uploader .el-upload:hover {
+        border-color: #409eff;
+    }
+    .avatar-uploader-icon {
+        font-size: 28px;
+        color: #8c939d;
+        width: 20vw;
+        height: 20vw;
+        line-height: 20vw;
+        text-align: center;
+    }
+    .avatar {
+        width: 20vw;
+        height: 20vw;
+        display: block;
+    }
+    .working {
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /**预测加载中**/
+    .loaderText {
+        line-height: 200%;
+        font-size: 12px;
+        color: #666666;
+        width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: textWork 4s infinite;
+    }
+    .loader {
+        position: relative;
+        width: 2.5em;
+        height: 2.5em;
+        transform: rotate(165deg);
+    }
+    .loader:before,
+    .loader:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 0.25em;
+        transform: translate(-50%, -50%);
+    }
+    .loader:before {
+        animation: before 2s infinite;
+    }
+    .loader:after {
+        animation: after 2s infinite;
+    }
+    @keyframes textWork {
+        0% {
+            width: 50px;
+        }
+        100% {
+            width: 68px;
+        }
+    }
+    @keyframes before {
+        0% {
+            width: 0.5em;
+            box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+        35% {
+            width: 2.5em;
+            box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+        }
+        70% {
+            width: 0.5em;
+            box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+        100% {
+            box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+    }
+    @keyframes after {
+        0% {
+            height: 0.5em;
+            box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+        }
+        35% {
+            height: 2.5em;
+            box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+        }
+        70% {
+            height: 0.5em;
+            box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+        }
+        100% {
+            box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+        }
+    }
+}

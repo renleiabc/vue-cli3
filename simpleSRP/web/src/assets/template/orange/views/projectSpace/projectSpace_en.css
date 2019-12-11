@@ -1,0 +1,37 @@
+/*
+ * @Author:任雷雷
+ * @Date: 2018-07-12 10:04:31
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 17:47:04
+ * @Description:项目空间的样式表
+ */
+.en .views-text-name {
+  width: 225px;
+  text-align: right;
+}
+.en .views-margin {
+  margin-left: 5px;
+}
+.en .views-btn-choice-en {
+  padding: 0 15px;
+}
+.en .views-task-span {
+  width: 200px;
+}
+.en .views-task-small .views-task-radio {
+  width: 190px;
+  display: inline-block;
+  text-align: right;
+}
+.en .views-task-sitting .views-task-cpu {
+  width: 60px;
+}
+.en .views-develop-image .views-icon-group {
+  left: 182px;
+}
+.en .views-project-space .tab-select .views-text-name {
+  width: 125px;
+}
+.en .views-project-space .tab-select .views-text-title {
+  width: 225px;
+}

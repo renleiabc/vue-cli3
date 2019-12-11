@@ -1,0 +1,15 @@
+{
+  "keywords": [
+    "Vue",
+    "Echarts"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "vue-echarts-sedu",
+  "private": true, 
+  "version": "0.0.0",
+  "dependencies": {
+    "echarts": "^4.1.0",
+    "vue": "^2.5.11"
+  }
+}

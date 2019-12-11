@@ -1,0 +1,23 @@
+{
+  "description": "Vue2.x + UEditor + v-model双向绑定",
+  "keywords": [
+    "ueditor",
+    "vue",
+    "v-model",
+    "富文本编辑器",
+    "百度编辑器"
+  ],
+  "license": "MIT",
+  "main": "./src/index.js",
+  "name": "vue-ueditor-wrap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaoChuan9421/vue-ueditor-wrap.git"
+  },
+  "scripts": {
+    "fix": "eslint lib/* --fix",
+    "lint": "eslint lib/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.3.5"
+}

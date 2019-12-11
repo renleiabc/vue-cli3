@@ -1,0 +1,86 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-12 11:25:09
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 14:32:54
+ * @Description: 
+ */
+/*
+ * @LastEditors: aFei
+ * @LastEditTime: 2018-07-23 17:27:05
+ */
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-11 16:54:34
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 18:21:27
+ * @Description: 
+ */
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.5s;
+}
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+/*breadcrumb transition*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.5s;
+}
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.breadcrumb-move {
+  transition: all 0.5s;
+}
+.breadcrumb-leave-active {
+  position: absolute;
+}
+.el-menu.else.el-menu--horizontal li {
+  width: auto;
+}
+.el-menu.else li {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+.el-menu.else li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+}
+.el-menu.else .el-submenu .el-menu .el-menu-item {
+  position: relative;
+}
+.el-menu.else .el-submenu .el-menu .el-menu-item a {
+  padding-left: 40px;
+}
+.el-menu.else .el-menu-item-group.else .el-menu-item {
+  padding: 0 !important;
+}
+.el-menu.else .el-menu-item-group.else .el-menu-item a {
+  padding-left: 20px;
+  box-sizing: border-box;
+}

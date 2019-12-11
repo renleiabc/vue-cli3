@@ -1,0 +1,89 @@
+/*创建镜像*/
+.views-image-manage-new-image {
+  .form-group {
+    width: 1200px;
+    display: flex;
+    .form-section {
+      flex: 0 0 50%;
+      .form-item {
+        display: flex;
+        margin: 20px 0;
+        .item-title {
+          flex: 0 0 110px;
+          text-align: right;
+          margin-right: 20px;
+          font-size: 14px;
+          height: 34px;
+          line-height: 34px;
+        }
+        .item-content {
+          flex: 1 1 auto;
+          .el-input__inner,
+          .el-textarea__inner {
+            width: 400px;
+          }
+          .el-input__inner {
+            height: 34px;
+          }
+          .upload-btn {
+            width: 90px;
+            height: 30px;
+            position: relative;
+            border: none;
+            line-height: 30px;
+            font-size: 14px;
+            background-color: #f49900;
+            text-decoration: none;
+            color: #fff;
+            .el-input {
+              position: absolute;
+              overflow: hidden;
+              right: 0;
+              top: 0;
+              opacity: 0;
+              .el-input__inner {
+                width: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-control {
+    width: 1200px;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+/*个人镜像，选择共享位置弹窗*/
+.shareSelectDialog {
+  .el-dialog__body {
+    padding: 20px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+.image-sel {
+  .query-v {
+    display: flex;
+    align-items: center;
+    .el-input {
+      width: 30%;
+    }
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+.views-personal-image-manage {
+  .share-dialog {
+    p {
+      line-height: 200%;
+    }
+    .el-row {
+      padding: 6px;
+    }
+  }
+}

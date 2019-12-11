@@ -1,0 +1,208 @@
+/*
+ * @Author:任雷雷
+ * @Date: 2018-07-12 10:04:31
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 17:48:12
+ * @Description:项目空间的样式表
+ */
+a {
+  text-decoration: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+li {
+  display: block;
+  margin: 0;
+}
+.input-text {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+}
+.input-btn {
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid #f49900;
+  background: #feebcb;
+}
+.views-project-space {
+  padding: 0 10px;
+  font-size: 14px;
+}
+.views-input-box {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.views-input-box .el-input__icon {
+  line-height: 0;
+  color: #c9c9c9;
+}
+.views-input-box .el-date-editor .el-range-separator {
+  height: auto;
+}
+.views-margin {
+  margin-left: 20px;
+}
+.el-input__inner {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+}
+.views-date .el-input__icon {
+  line-height: 0;
+  color: #c9c9c9;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.views-input-text {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+}
+.views-button {
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid #f49900;
+  background: #feebcb;
+  color: #f7bc6e;
+}
+.views-margin-btn {
+  margin-left: 30px;
+}
+.views-table-btn {
+  margin-bottom: 20px;
+}
+.views-table-btn .views-button {
+  background: #f49900;
+  color: #fff;
+  font-size: 16px;
+}
+.views-table-content {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.views-table-content .el-table td,
+.views-table-content .el-table th.is-leaf {
+  border-bottom: 1px solid #c9c9c9;
+}
+.views-table-content .el-table--border td,
+.views-table-content .el-table--border th,
+.views-table-content .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+  border-right: 1px solid #c9c9c9;
+}
+.views-table-content .el-table--border,
+.views-table-content .el-table--group {
+  border: 1px solid #c9c9c9;
+}
+.views-table-content .table-header th {
+  background: #f49900;
+  color: #fff;
+  font-size: 16px;
+}
+.views-table-content .el-checkbox__inner {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cbcbcb;
+}
+.views-table-content .el-checkbox__inner::after {
+  left: 6px;
+  top: 3px;
+}
+.views-table-content .el-checkbox__input.is-checked .el-checkbox__inner,
+.views-table-content .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #f46200;
+  border-color: #f46200;
+}
+.views-table-content .el-table .cell a {
+  display: block;
+}
+.views-table-link {
+  color: #f49900;
+  cursor: pointer;
+}
+.views-box {
+  margin-bottom: 20px;
+}
+.views-table-span {
+  color: #5287d3;
+  cursor: pointer;
+}
+.views-table-margin {
+  margin-right: 10px;
+}
+.views-text-name {
+  width: 100px;
+  display: inline-block;
+}
+.views-develop {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.views-develop li {
+  float: left;
+  margin-left: 5px;
+}
+.views-develop li a {
+  margin-right: 5px;
+  color: #c9c9c9;
+}
+.views-develop li .develop-link {
+  color: blue;
+}
+.views-page {
+  text-align: center;
+  margin-top: 30px;
+}
+.views-page .el-pager li.active {
+  color: #f49900;
+  cursor: default;
+}
+.table-td {
+  width: 200px;
+  background: #e5e5e5;
+  padding-right: 20px;
+}
+.views-project-details {
+  width: calc(80%);
+  border: 1px solid #c9c9c9;
+  margin: 30px 10px 0 10px;
+}
+.views-project-details tr {
+  border-bottom: 1px solid #c9c9c9;
+}
+.views-project-details tr td {
+  border-left: 1px solid #c9c9c9;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+.views-project-details tr td:first-child {
+  width: 200px;
+  background: #e5e5e5;
+  padding-right: 20px;
+}
+.views-project-details tr td:nth-child(3) {
+  width: 200px;
+  background: #e5e5e5;
+  padding-right: 20px;
+}
+.views-table-margin {
+  margin-left: 10px;
+}
+.views-development {
+  width: calc(80%);
+  margin: 0 10px;
+  font-size: 14px;
+}
+.views-development .el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: 3px solid #f49900;
+  color: #c9c9c9;
+}
+.views-development li a {
+  display: block;
+}

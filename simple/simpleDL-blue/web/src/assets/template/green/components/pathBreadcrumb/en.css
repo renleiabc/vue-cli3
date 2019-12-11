@@ -1,0 +1,31 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-12 11:25:12
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 11:25:12
+ * @Description: 
+ */
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-12 11:25:09
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 11:25:09
+ * @Description: 
+ */
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-11 16:54:56
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-11 16:54:56
+ * @Description: 
+ */
+.components-path-breadcrumb {
+  width: 100%;
+  overflow: hidden;
+}
+.components-path-breadcrumb > a,
+.components-path-breadcrumb > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

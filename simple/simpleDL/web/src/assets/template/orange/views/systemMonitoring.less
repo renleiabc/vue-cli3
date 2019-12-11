@@ -1,0 +1,57 @@
+/*
+ * @Author: 少侠
+ * @Date: 2018-07-31 11:17:56
+ * @LastEditors: 少侠
+ * @LastEditTime: 2018-07-31 17:10:04
+ * @Description: 系统监控页面样式
+ */
+@import '../public.less';
+/**
+系统监控
+*/
+.systemMonitoringPage {
+  padding: 10px;
+  h6 {
+    font-size: 16px;
+    padding: 16px 0;
+    span {
+      color: @rad_active;
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+  .title-chart {
+    font-size: 16px;
+    margin-bottom: 6px;
+    .real-value {
+      color: #f43100;
+      font-size: 20px;
+    }
+    .total-value {
+      color: #666666;
+    }
+  }
+  .v-cpu,
+  .v-memory,
+  .v-gpu {
+    display: inline-block;
+  }
+  .v-line {
+    border-bottom: 1px solid #ddd;
+  }
+  .v-pie {
+    position: relative;
+    h6 {
+      text-align: left;
+    }
+    .middle-line {
+      position: absolute;
+      height: 200px;
+      left: 49%;
+      margin: 120px 0;
+      width: 1px;
+      background-color: #dddddd;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Vue 文件层级面包屑 基础组件",
+  "keywords": [
+    "Vue",
+    "Path",
+    "Breadcrumb"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "vue-path-breadcrumb",
+  "private": true,
+  "version": "0.0.0"
+}

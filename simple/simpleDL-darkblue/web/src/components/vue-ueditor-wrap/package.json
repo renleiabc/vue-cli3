@@ -1,0 +1,14 @@
+{
+  "description": "Vue2.x + UEditor + v-model双向绑定",
+  "keywords": [
+    "ueditor",
+    "vue",
+    "v-model",
+    "富文本编辑器",
+    "百度编辑器"
+  ],
+  "license": "MIT",
+  "main": "./src/index.vue",
+  "name": "vue-ueditor-wrap",
+  "version": "1.3.5"
+}

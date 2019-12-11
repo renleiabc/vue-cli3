@@ -1,0 +1,32 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-12 11:25:09
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 14:32:54
+ * @Description: 
+ */
+@import '../../public';
+.components-path-breadcrumb {
+  @lineHeight: 30 / vw;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  small {
+    font-size: 14 / @vw;
+    color: #666;
+  }
+  a,
+  i {
+    max-width: 100 / @vw;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+  }
+  .el-icon-arrow-right {
+    margin: 0 5px 0 0;
+  }
+}

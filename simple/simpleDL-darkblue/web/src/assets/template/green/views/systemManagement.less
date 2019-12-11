@@ -1,0 +1,335 @@
+/*
+ * @Author: aFei
+ * @Date: 2018-07-19 17:48:16
+ */
+/*
+ * @LastEditors: aFei
+ * @LastEditTime: 2018-07-24 17:18:59
+ */
+//系统告警
+.views-system-management-system-alarm{
+  .tab-content{
+    .green{
+      color: #349d6f;
+    }
+    .yellow{
+      color: #ff8400;
+    }
+    .red{
+      color: #f51031;
+    }
+  }
+}
+//系统日志
+.views-system-management-system-setting{
+  .disk-title,.log-title{
+    color: #5f5f5f;
+    font-size: 14px;
+    .el-input__icon{
+      line-height: 30px;
+    }
+    .el-input__inner{
+      width: 116px;
+    }
+    >button{
+      width: 70px;
+      height: 30px;
+      background: #f49900;
+      outline: none;
+      border: none;
+      font-size: 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      color: #fff;
+      &:hover{
+        background: #f48300;
+      }
+    }
+  }
+  .quota-title{
+    display: flex;
+    justify-content: space-between;
+    .item{
+      border: 1px solid #dddddd;
+      height: 400px;
+      width: 234px;
+      padding: 16px;
+      box-sizing: border-box;
+      position: relative;
+      &.else{
+        width: 330px;
+      }
+      .item-top{
+        color: #323232;
+        font-size: 16px;
+      }
+      .content{
+        >p{
+          font-size: 14px;
+          color: #6c6c6c;
+          margin-top: 30px;
+          margin-bottom: 5px;
+        }
+        .el-input__icon{
+          line-height: 30px;
+        }
+        .el-input .el-input__inner{
+          height: 30px !important;
+        }
+        .group{
+          margin-top: 30px;
+          >p{
+            font-size: 14px;
+            color: #323232;
+            margin-bottom: 10px;
+          }
+          .group-content{
+            display: flex;
+            .group-content-item{
+              width: 112px;
+              p{
+                font-size: 14px;
+                color: #6c6c6c;
+                margin-bottom: 5px;
+              }
+              .el-input{
+                width: 112px;
+              }
+              .el-input__inner{
+                width: 100%;
+              }
+              &:first-child{
+                 width: calc(100% - 112px);
+                .el-input{
+                  width: 130px;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .controls{
+        position: absolute;
+        bottom: 20px;
+        right: 16px;
+        button{
+          width: 70px;
+          height: 30px;
+          background: #f49900;
+          outline: none;
+          border: none;
+          font-size: 14px;
+          border-radius: 3px;
+          cursor: pointer;
+          color: #fff;
+          &:hover{
+            background: #f48300;
+          }
+        }
+      }
+    }
+  }
+  .quota-content{
+    border: 1px solid #dddddd;
+    padding: 16px;
+    margin-top: 20px;
+    position: relative;
+    >p{
+      font-size: 16px;
+      color: #323232;
+    }
+    >button{
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 70px;
+      height: 30px;
+      background: #f49900;
+      outline: none;
+      border: none;
+      font-size: 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      color: #fff;
+      a{
+        color: #ffffff;
+      }
+      &:hover{
+        background: #f48300;
+      }
+    }
+  }
+  .tab-content{
+    text-align: center;
+    .green{
+      color: #349d6f;
+    }
+    .yellow{
+      color: #ff8400;
+    }
+    .red{
+      color: #f51031;
+    }
+    .clear,.setResource{
+      background: none;
+      color: #417dd0;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+    .projectName{
+      color: #f48400;
+    }
+  }
+  .diskCleaningPop{
+    .el-dialog__header{
+      .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
+        color: #f48400;
+      }
+    }
+    .content{
+      font-size: 14px;
+      .el-input__icon{
+        line-height: 30px;
+      }
+      .el-date-editor.el-input, .el-date-editor.el-input__inner{
+        width: 160px;
+      }
+      .el-input__inner{
+        width: 140px;
+      }
+    }
+    .dialog-footer{
+      button{
+        &.cancel{
+          &:hover,&:focus{
+            color: #f49900;
+            border-color: #f49900;
+          }
+        }
+        &.primary{
+          background-color:#f49900;
+          border: none;
+          &:hover{
+            background-color: #f48300;
+          }
+        }
+      }
+    }
+  }
+  .setResourcePop{
+    .el-dialog__header{
+      .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
+        color: #f48400;
+      }
+    }
+    .el-dialog__body{
+      padding: 10px 20px;
+    }
+    .tab-content{
+      margin: 0;
+      .el-radio__inner:hover{
+        border-color:#f49900;
+      }
+      .el-radio__input.is-checked .el-radio__inner{
+        border-color:#f49900;
+        background:#f49900;
+      }
+    }
+    .dialog-footer{
+      button{
+        &.cancel{
+          &:hover,&:focus{
+            color: #f49900;
+            border-color: #f49900;
+          }
+        }
+        &.primary{
+          background-color:#f49900;
+          border: none;
+          &:hover{
+            background-color: #f48300;
+          }
+        }
+      }
+    }
+  }
+}
+//配额管理
+.views-system-management-quota-management{
+  >button{
+    width: 70px;
+    height: 30px;
+    background: #f49900;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+      background: #f48300;
+    }
+  }
+  .tab-content{
+    .delete,.change{
+      background: none;
+      color: #417dd0;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+  }
+  .changeQuotaPop{
+    .el-dialog__header{
+      .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
+        color: #f48400;
+      }
+    }
+    .form-item{
+      display: flex;
+      margin-bottom: 30px;
+      .form-left{
+        width: 85px;
+        text-align: right;
+        padding-right: 15px;
+        box-sizing: border-box;
+      }
+      .form-right{
+        position: relative;
+        .el-input{
+          width: 256px;
+          margin-right: 10px;
+        }
+        .el-input__inner{
+          width: 100%;
+        }
+        .prompt{
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          font-size: 12px;
+          color: #5f5f5f;
+        }
+      }
+    }
+    .dialog-footer{
+      button{
+        &.cancel{
+          &:hover,&:focus{
+            color: #f49900;
+            border-color: #f49900;
+          }
+        }
+        &.primary{
+          background-color:#f49900;
+          border: none;
+          &:hover{
+            background-color: #f48300;
+          }
+        }
+      }
+    }
+  }
+}

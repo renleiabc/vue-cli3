@@ -1,0 +1,71 @@
+@import '../public.less';
+@elHeaderHeight: 60px;
+.views-main-el-header {
+  background-color: @THEME_COLOR;
+  width: 100vw;
+  padding: 0 20px;
+  overflow: hidden;
+  color: #fff;
+  h1 {
+    float: left;
+    font-weight: bold;
+    font-size: 1.2vw;
+    line-height: 60px;
+  }
+}
+
+.views-main-el-header-el-dropdown {
+  float: right;
+  padding-top: 23px;
+  color: #fff;
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: @THEME_COLOR;
+}
+
+a:hover {
+  color: desaturate(@THEME_COLOR, 50%);
+  transition: all 1s;
+}
+
+.el-main {
+  padding: 0 1vw;
+  line-height: 150%;
+  font-size: 16 / @vw;
+}
+
+.views-main-el-aside-navbar {
+  width: 200 / @vw;
+  background-color: desaturate(@THEME_COLOR, 20%);
+  min-height: calc(100% - @elHeaderHeight);
+  min-height: -ms-calc(100% - @elHeaderHeight);
+  overflow: hidden;
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+  .el-scrollbar__thumb {
+    background-color: lighten(@THEME_COLOR, 15%) !important;
+    &:hover {
+      background-color: lighten(@THEME_COLOR, 35%) !important;
+    }
+  }
+  .replace_active {
+    background: lighten(@THEME_COLOR, 5%) !important;
+  }
+}

@@ -1,0 +1,227 @@
+/*
+ * @Author:任雷雷
+ * @Date: 2018-07-12 10:04:31
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 17:48:12
+ * @Description:项目空间的样式表
+ */
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+li {
+  display: block;
+  margin: 0;
+}
+
+//变量设置
+@color: #c9c9c9;
+@orange: #f49900;
+.input-text {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+}
+
+.input-btn {
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid @orange;
+  background: #feebcb;
+}
+
+.views-project-space {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.views-input-box {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  .el-input__icon {
+    line-height: 0;
+    color: @color;
+  }
+  .el-date-editor .el-range-separator {
+    height: auto;
+  }
+}
+
+.views-margin {
+  margin-left: 20px;
+}
+
+.el-input__inner {
+  .input-text;
+}
+
+.views-date .el-input__icon {
+  line-height: 0;
+  color: @color;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.views-input-text {
+  .input-text;
+}
+
+.views-button {
+  .input-btn;
+  color: #f7bc6e;
+}
+
+.views-margin-btn {
+  margin-left: 30px;
+}
+
+.views-table-btn {
+  margin-bottom: 20px;
+  .views-button {
+    background: @orange;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+.views-table-content {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  .el-table td,
+  .el-table th.is-leaf {
+    border-bottom: 1px solid @color;
+  }
+  .el-table--border td,
+  .el-table--border th,
+  .el-table__body-wrapper
+    .el-table--border.is-scrolling-left
+    ~ .el-table__fixed {
+    border-right: 1px solid @color;
+  }
+  .el-table--border,
+  .el-table--group {
+    border: 1px solid @color;
+  }
+  .table-header th {
+    background: @orange;
+    color: #fff;
+    font-size: 16px;
+  }
+  .el-checkbox__inner {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cbcbcb;
+  }
+  .el-checkbox__inner::after {
+    left: 6px;
+    top: 3px;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #f46200;
+    border-color: #f46200;
+  }
+  .el-table .cell a {
+    display: block;
+  }
+}
+
+.views-table-link {
+  color: @orange;
+  cursor: pointer;
+}
+
+.views-box {
+  margin-bottom: 20px;
+}
+
+.views-table-span {
+  color: #5287d3;
+  cursor: pointer;
+}
+
+.views-table-margin {
+  margin-right: 10px;
+}
+
+.views-text-name {
+  width: 100px;
+  display: inline-block;
+}
+
+.views-develop {
+  overflow: hidden;
+  margin-top: 20px;
+  li {
+    float: left;
+    margin-left: 5px;
+    a {
+      margin-right: 5px;
+      color: @color;
+    }
+    .develop-link {
+      color: blue;
+    }
+  }
+}
+
+.views-page {
+  text-align: center;
+  margin-top: 30px;
+  .el-pager li.active {
+    color: @orange;
+    cursor: default;
+  }
+}
+
+.table-td {
+  width: 200px;
+  background: #e5e5e5;
+  padding-right: 20px;
+}
+
+//项目详情表格数据
+.views-project-details {
+  width: calc(100% - 20px);
+  border: 1px solid @color;
+  margin: 30px 10px 0 10px;
+  tr {
+    border-bottom: 1px solid @color;
+    td {
+      border-left: 1px solid @color;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 20px;
+      &:first-child {
+        .table-td;
+      }
+      &:nth-child(3) {
+        .table-td;
+      }
+    }
+  }
+}
+
+.views-table-margin {
+  margin-left: 10px;
+}
+
+.views-development {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  font-size: 14px;
+  .el-menu--horizontal > .el-menu-item.is-active {
+    border-bottom: 3px solid @orange;
+    color: @color;
+  }
+  li a {
+    display: block;
+  }
+}

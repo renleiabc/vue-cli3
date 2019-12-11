@@ -1,0 +1,114 @@
+/*
+ * @Author: 少侠
+ * @Date: 2018-07-31 11:17:56
+ * @LastEditors: 少侠
+ * @LastEditTime: 2018-07-31 17:10:04
+ * @Description: 系统监控页面样式
+ */
+@import '../public.less';
+/**
+系统监控
+*/
+.systemMonitoringPage {
+  position: relative;
+  padding: 10px;
+  h6 {
+    font-size: 16px;
+    padding: 16px 0;
+    span {
+      color: @rad_active;
+    }
+  }
+  .record-detail{
+    font-size: 14px;
+    color: #FF0000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .chart-item{
+    position: relative;
+    .top-line{
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      width:25%;
+      height: auto;
+    }
+    .top-label{
+      position: absolute;
+      top: 9%;
+      left:76%;
+      font-size: 14px;
+      color: #666666;
+    }
+    .bottom-line{
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      width:25%;
+      height: auto;
+    }
+    .bottom-label{
+      position: absolute;
+      bottom: 15%;
+      left:76%;
+      font-size: 14px;
+      color: #666666;
+      text-align: left;
+      div {
+        padding: 6px 0 6px 0;
+      }
+    }
+    .link-text{
+      color: #F49900;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .chart-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+    .real-value {
+      color: #f43100;
+      font-size: 20px;
+    }
+    .total-value {
+      color: #666666;
+    }
+  }
+  .chart-sub-title{
+    font-size: 14px;
+    color: #2E5199;
+    padding-top:12px;
+    span:first-child {
+      padding-right: .5em;
+    }
+  }
+  .v-cpu,
+  .v-memory,
+  .v-gpu {
+    display: inline-block;
+  }
+  .v-line {
+    border-bottom: 1px solid #ddd;
+  }
+  .v-pie {
+    position: relative;
+    h6 {
+      text-align: left;
+    }
+    .middle-line {
+      position: absolute;
+      height: 200px;
+      left: 49%;
+      margin: 120px 0;
+      width: 1px;
+      background-color: #dddddd;
+    }
+  }
+}

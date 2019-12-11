@@ -1,0 +1,77 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-11 16:54:34
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 18:21:27
+ * @Description: 
+ */
+
+@PATH_ROOT: '';
+@PATH_COMPONENTS: 'components/';
+@vw: 1920vw/100;
+@vh: 1080vh/100;
+@THEME_COLOR: #42b983;
+@THEME_COLOR_HOVER: darken(@THEME_COLOR, 10%);
+@THEME_LINK_COLOR: @THEME_COLOR;
+@THEME_LINK_HOVER: @THEME_COLOR;
+@tab_font_color: #5c6266;
+@tab_border_color: #c9c9c9;
+@tab_border_active_color: #f2c77f;
+@tab_th_background_color: #f49900;
+@tab_th_sort_normal_color: rgba(255, 255, 255, 0.4);
+@tab_th_sort_active_color: rgb(255, 255, 255);
+@tab_sel_button_border_color: #f49900;
+@tab_sel_button_background_color: #feebcb;
+@tab_sel_button_background_active_color: #f49900;
+@tabs_active: #f48400;
+@tab_page_active: #f49900;
+//globl transition css
+/*fade*/
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
+
+/*fade-transform*/
+
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+    transition: all 0.5s;
+}
+
+.fade-transform-enter {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/*breadcrumb transition*/
+
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+    transition: all 0.5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.breadcrumb-move {
+    transition: all 0.5s;
+}
+
+.breadcrumb-leave-active {
+    position: absolute;
+}

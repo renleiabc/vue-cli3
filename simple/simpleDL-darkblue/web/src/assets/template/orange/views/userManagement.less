@@ -1,0 +1,79 @@
+/*
+ * @Author: aFei
+ * @Date: 2018-07-24 17:49:58
+ */
+/*
+ * @LastEditors: aFei
+ * @LastEditTime: 2018-08-13 10:08:44
+ */
+//主体内容
+.views-user-management-home {
+  .controls-else {
+    margin-top: 30px;
+  }
+  .tab-content {
+    margin-top: 10px;
+  }
+  .changePermissionPop {
+    .content {
+      > ul {
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+//用户详情
+.views-user-management-user-details {
+  .row {
+    display: flex;
+    border-bottom: 1px dotted #dcdcdc;
+    font-size: 14px;
+    color: #444444;
+    padding: 16px 0;
+    &:last-child {
+      border-bottom: 0;
+    }
+    .row-first,
+    .row-last {
+      display: flex;
+    }
+    .row-first {
+      width: 345px;
+      line-height: 150%;
+      &.else {
+        width: 100%;
+        .content {
+          width: 440px;
+          white-space: normal;
+          word-break: break-all;
+        }
+      }
+      .tit {
+        width: 80px;
+      }
+      .content {
+        width: calc(100% - 80px);
+        word-break: break-all;
+      }
+    }
+    .row-last {
+      width: calc(100% - 335px);
+      padding-left: 10px;
+      .tit {
+        width: 100px;
+      }
+      .content {
+        width: calc(100% - 116px);
+        word-break: break-all;
+      }
+    }
+  }
+}
+//添加用户
+.views-user-management-add-user {
+  .el-select {
+    width: 100%;
+  }
+}

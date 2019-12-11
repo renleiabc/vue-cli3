@@ -1,0 +1,37 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-12 11:25:09
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 14:32:54
+ * @Description: 
+ */
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-11 16:54:56
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-12 11:27:11
+ * @Description: 
+ */
+.components-path-breadcrumb {
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+.components-path-breadcrumb small {
+  font-size: 0.72916667vw;
+  color: #666;
+}
+.components-path-breadcrumb a,
+.components-path-breadcrumb i {
+  max-width: 5.20833333vw;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+.components-path-breadcrumb .el-icon-arrow-right {
+  margin: 0 5px 0 0;
+}

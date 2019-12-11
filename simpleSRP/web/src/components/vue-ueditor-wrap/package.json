@@ -1,0 +1,68 @@
+{
+  "_from": "vue-ueditor-wrap@1.3.5",
+  "_id": "vue-ueditor-wrap@1.3.5",
+  "_inBundle": false,
+  "_integrity": "sha512-igFOQ6q8WBqIMSqyiYZesIqyc0GqIanTwUjpgrPiBRhZnN7WyeQ2rDsWcwlppU4ruZdYr6ubAerXBMQTV6nkLQ==",
+  "_location": "/vue-ueditor-wrap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "vue-ueditor-wrap@1.3.5",
+    "name": "vue-ueditor-wrap",
+    "escapedName": "vue-ueditor-wrap",
+    "rawSpec": "1.3.5",
+    "saveSpec": null,
+    "fetchSpec": "1.3.5"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vue-ueditor-wrap/-/vue-ueditor-wrap-1.3.5.tgz",
+  "_shasum": "480ccbe85495a1f785bfbb4ceea405ee6cbadc53",
+  "_spec": "vue-ueditor-wrap@1.3.5",
+  "_where": "E:\\svnWork\\simpleSRP\\web",
+  "author": {
+    "name": "郑昊川"
+  },
+  "bugs": {
+    "url": "https://github.com/HaoChuan9421/vue-ueditor-wrap/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Vue2.x + UEditor + v-model双向绑定",
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.0.0"
+  },
+  "homepage": "https://github.com/HaoChuan9421/vue-ueditor-wrap#readme",
+  "keywords": [
+    "ueditor",
+    "vue",
+    "v-model",
+    "富文本编辑器",
+    "百度编辑器"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "vue-ueditor-wrap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaoChuan9421/vue-ueditor-wrap.git"
+  },
+  "scripts": {
+    "fix": "eslint lib/* --fix",
+    "lint": "eslint lib/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.3.5"
+}

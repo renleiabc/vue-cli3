@@ -1,0 +1,888 @@
+/*
+ * @Author:任雷雷
+ * @Date: 2018-07-12 10:04:31
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-24 17:48:12
+ * @Description:项目空间的样式表
+ */
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+li {
+    display: block;
+    margin: 0;
+}
+
+//变量设置
+@color: #c9c9c9;
+@orange: #f49900;
+@blue: #417dd0;
+.input-text {
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+
+.input-btn {
+    height: 30px;
+    padding: 5px 20px;
+    border: 1px solid @orange;
+    background: #feebcb;
+}
+
+.views-project-space {
+    padding: 0 10px;
+    font-size: 14px;
+    .tab-select {
+        margin-top: 20px;
+        .views-text-name {
+            width: 100px;
+        }
+    }
+}
+
+.views-input-box {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    .el-input__icon {
+        line-height: 0;
+        color: @color;
+    }
+    .el-date-editor .el-range-separator {
+        height: auto;
+    }
+}
+
+.views-margin {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.views-input-box {
+    .el-input__inner {
+        .input-text;
+    }
+}
+
+.views-date .el-input__icon {
+    line-height: 0;
+    color: @color;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.views-input-text {
+    .input-text;
+    width: 217px;
+}
+
+.views-button {
+    .input-btn;
+    color: #f7bc6e;
+}
+
+.views-margin-btn {
+    margin-left: 30px;
+}
+
+.views-table-btn {
+    margin-bottom: 20px;
+    float: right;
+    .views-button {
+        background: @orange;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.views-table-project {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .views-button {
+        background: @orange;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.views-table-content {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.views-table-link {
+    color: @blue;
+    cursor: pointer;
+}
+
+.views-project-file {
+    color: @blue;
+}
+
+.views-box {
+    margin-bottom: 20px;
+}
+
+.views-table-span {
+    color: @blue;
+    cursor: pointer;
+}
+
+.views-table-margin {
+    margin-right: 10px;
+}
+
+.views-text-name {
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+    font-size: 14px;
+}
+
+.views-develop {
+    overflow: hidden;
+    margin-top: 20px;
+    li {
+        float: left;
+        margin-left: 5px;
+        a {
+            margin-right: 5px;
+            color: @color;
+        }
+        .develop-link {
+            color: blue;
+        }
+    }
+}
+
+.views-page {
+    text-align: center;
+    margin-top: 30px;
+    .el-pager li.active {
+        color: @orange;
+        cursor: default;
+    }
+}
+
+.table-td {
+    width: 200px;
+    padding-right: 20px;
+}
+
+//项目详情表格数据
+.views-project-details {
+    width: calc(100% - 20px);
+    margin: 25px 10px 0 10px;
+    font-size: 14px;
+    tr {
+        border-bottom: 1px dotted #EBEBEB;
+        td {
+            height: 34px;
+            line-height: 34px;
+            padding-left: 20px;
+            &:first-child {
+                .table-td;
+            }
+            &:nth-child(3) {
+                .table-td;
+            }
+        }
+    }
+}
+
+.views-table-margin {
+    margin-left: 10px;
+}
+
+.views-table-color {
+    color: @orange;
+}
+
+.views-development {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    font-size: 14px;
+    .el-tabs__item {
+        height: 60px;
+        line-height: 60px;
+    }
+    .el-tabs--top .el-tabs__item.is-top {
+        padding: 0 20px;
+        margin: 0 10px;
+    }
+    .el-tabs__active-bar {
+        height: 3px;
+    }
+}
+
+.icon-font {
+    width: 20px;
+    display: inline-block;
+    text-align: right;
+    font-size: 15px;
+}
+
+.views-icon-stop {
+    color: @orange;
+    .icon-font;
+}
+
+.views-icon-kaifa {
+    color: #14B2ED;
+    .icon-font;
+}
+
+.views-icon-yiguidang {
+    color: #6C6EC1;
+    .icon-font;
+}
+
+.views-icon-yunhangzhong {
+    color: #21bb85;
+    .icon-font;
+}
+
+.views-icon-warning {
+    color: #fc3145;
+    .icon-font;
+}
+
+.views-icon-chuangjian {
+    color: #14b2ef;
+    .icon-font;
+}
+
+.views-icon-yiguanbi {
+    color: #f1817d;
+    .icon-font;
+}
+
+.views-icon-shanchu {
+    color: #6d556f;
+    .icon-font;
+}
+
+//创建开发环境
+.views-personal {
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    padding: 0 20px;
+}
+
+.views-header-inf {
+    border-bottom: 1px solid rgba(225, 221, 221, 1);
+    margin-top: 30px;
+    span {
+        color: @orange;
+        border-bottom: 2px solid @orange;
+        padding-bottom: 7px;
+        display: inline-block;
+    }
+}
+
+.views-develop-inf {
+    overflow: hidden;
+    width: 100%;
+    .views-develop-text {
+        float: left;
+        width: 45%;
+        padding-right: 5%;
+    }
+}
+
+.views-develop-input {
+    margin-top: 25px;
+    .el-input {
+        .el-input__inner {
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-develop-select {
+    margin-top: 25px;
+    .el-input__icon {
+        line-height: 0;
+    }
+    .el-select {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        .el-input__inner {
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-develop-image {
+    margin-top: 25px;
+    .views-develop-mb {
+        margin-bottom: 15px;
+    }
+    .views-develop-choice {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        .el-input {
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+        .view-btn-medium {
+            margin-left: 1%;
+        }
+        .views-btn-reduce {
+            width: 50px;
+            margin-left: 10px;
+        }
+        .views-btn-choice {
+            margin-left: auto;
+        }
+    }
+    .views-span {
+        float: left;
+    }
+}
+
+.views-icon-ruleForm {
+    .el-form-item__label {
+        padding: 0 3px 0 0;
+        padding-right: 20px;
+    }
+    .views-develop-resources .el-form-item {
+        width: 38%;
+        .el-select {
+            width: 70%;
+        }
+    }
+}
+
+.views-develop-image {
+    position: relative;
+    .views-icon-group {
+        position: absolute;
+        left: 102px;
+        top: 15px;
+        font-size: 12px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .views-develop-choice {
+        width: 70%;
+    }
+}
+
+.views-develop-text {
+    .views-develop-image {
+        .views-develop-choice {
+            width: 100%;
+        }
+    }
+}
+
+.views-develop-mount {
+    margin-top: 25px;
+    .el-input {
+        width: 30%;
+        margin: 0 10px;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+    .views-mount-span {
+        color: red;
+        font-size: 12px;
+        margin-left: 12px;
+        display: inline-block;
+        font-weight: bolder;
+    }
+}
+
+.views-btn-reduce {
+    text-align: center;
+    color: #fff;
+    background: @orange;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.views-develop-resources {
+    margin-top: 25px;
+    .el-input__icon {
+        line-height: 0;
+    }
+    .el-form-item {
+        display: inline-block;
+        margin-bottom: 0;
+        .el-select {
+            display: inline-block;
+            position: relative;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+    span:not(:first-child) {
+        display: inline-block;
+        width: 10%;
+        text-align: right;
+    }
+}
+
+.views-develop-btn {
+    margin: 6% 0;
+    text-align: center;
+}
+
+//创建训练任务
+.views-task-input {
+    margin-top: 25px;
+    .el-input {
+        width: 70%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-task-image {
+    margin-top: 25px;
+    .views-span {
+        float: left;
+    }
+    .el-textarea {
+        width: 70%;
+    }
+}
+
+.views-task-small {
+    margin-top: 25px;
+    .el-input {
+        width: 25%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+    .views-task-radio {
+        width: 150px;
+        display: inline-block;
+        text-align: right;
+    }
+    .el-select {
+        width: 25%;
+        .el-input {
+            width: 100%;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-task-span {
+    width: 120px;
+    text-align: right;
+    display: inline-block;
+    .views-task-icon {
+        margin-right: 5px;
+        color: @orange;
+    }
+    .views-task-second {
+        margin-left: 10px;
+        margin-right: 5px;
+        color: @orange;
+    }
+    .views-icon-group {
+        font-size: 12px;
+    }
+}
+
+.views-task-span-mg {
+    width: 85px;
+    margin-left: 10px;
+    float: left;
+}
+
+.views-task-middle {
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.views-task-ml {
+    margin-right: 20px;
+}
+
+.views-task-div {
+    display: inline-block;
+    width: 70%;
+    .el-input {
+        width: 90%;
+        .el-input__inner {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+
+.views-task-left,
+.views-task-right {
+    float: left;
+}
+
+.views-task-left {
+    height: 34px;
+    line-height: 34px;
+}
+
+.views-task-right {
+    width: 70%;
+    .views-task-params {
+        display: inline-block;
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        margin-bottom: 18px;
+        span {
+            margin-top: 5px;
+        }
+        .el-input {
+            width: 45%;
+            float: left;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-task-right {
+    width: 70%;
+    .views-model-params {
+        display: inline-block;
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        margin-bottom: 18px;
+        span {
+            margin-top: 5px;
+        }
+        .views-task-sign {
+            width: 4%;
+        }
+        .el-input {
+            width: 48%;
+            float: left;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.views-task-run {
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.views-task-sign {
+    width: 5%;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.views-task-border {
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+}
+
+.views-task-sitting-mg {
+    margin: 10px 0;
+    margin-left: 2%;
+}
+
+.views-task-sitting {
+    height: 64px;
+    line-height: 64px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 85%;
+    background: #E0E0E0;
+    .el-select {
+        width: 13%;
+        .el-input {
+            width: 100%;
+            .el-input__inner {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+    .views-task-cpu {
+        display: inline-block;
+        width: 50px;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.views-task-type {
+    overflow: hidden;
+}
+
+.views-task-node {
+    margin-top: 10px;
+    overflow: hidden;
+    .views-task-node-span {
+        float: left;
+        width: 100px;
+        height: 64px;
+        line-height: 64px;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.views-task-bottom {
+    margin-bottom: 10px;
+}
+
+//开发环境详情
+.views-basic-color1 {
+    background: #E4E4E4;
+}
+
+.views-basic-color2 {
+    background: #D4D4D4;
+}
+
+.views-basic-color3 {
+    background: #EFEFEF;
+}
+
+.views-basic-name {
+    .el-input.is-disabled .el-input__inner {
+        background: #fff;
+        color: #5F5F5F;
+        cursor: not-allowed;
+    }
+    .el-input {
+        width: 90%;
+        .el-input__inner {
+            border: none;
+            padding: 0;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 0;
+            font-size: 14px;
+        }
+    }
+}
+
+.views-icon-edit {
+    font-size: 24px;
+    color: #F49900;
+    cursor: pointer;
+}
+
+.views-tabel-details {
+    tr {
+        td {
+            width: 33%;
+        }
+    }
+}
+
+.views-dialog {
+    .el-dialog__header {
+        padding: 10px 20px 10px;
+        background: #F49900;
+        .el-dialog__title {
+            color: #fff;
+        }
+        .el-dialog__headerbtn {
+            top: 15px;
+        }
+    }
+    .el-dialog__header .el-dialog__headerbtn:hover .el-dialog__close {
+        color: #fff;
+    }
+}
+
+.views-dialog-develop {
+    width: 100%;
+    .el-input {
+        width: 75%;
+        .el-input__inner {
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+    .views-dialog-name {
+        margin-right: 2%;
+        display: inline-block;
+    }
+    .el-textarea {
+        width: 80%;
+    }
+}
+
+.views-develop-edit {
+    padding: 10px 0;
+    overflow: hidden;
+    i {
+        float: right;
+    }
+}
+
+.views-develop-remarks {
+    .el-textarea.is-disabled .el-textarea__inner {
+        background: #fff;
+        color: #5F5F5F;
+    }
+}
+
+.views-dialog-remarks {
+    float: left;
+    margin-right: 2%;
+}
+
+.views-charts-mt {
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    position: relative;
+    .views-chats-times {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        z-index: 10000;
+        .el-select {
+            width: 200px;
+            .el-input {
+                width: 100%;
+                .el-input__inner {
+                    width: 100%;
+                    height: 32px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .el-input__icon {
+        line-height: 0;
+    }
+}
+
+//训练日志详情
+.views-task-news {
+    margin-top: 10px;
+    overflow: hidden;
+    .views-task-select {
+        float: right;
+        .el-select {
+            width: 200px;
+            .el-input {
+                width: 100%;
+                .el-input__inner {
+                    width: 100%;
+                    height: 34px;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+    .el-input__icon {
+        line-height: 0;
+    }
+}
+
+.views-task-text {
+    font-size: 12px;
+    color: #B7B7B7;
+    margin-bottom: 10px;
+}
+
+.views-task-log {
+    border: 2px solid #C9C9C9;
+    height: 200px;
+    border-radius: 4px;
+    .veiws-text-log {
+        padding: 20px 15px;
+    }
+}
+
+.views-table-details {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.views-charts-box {
+    width: 100%;
+    overflow: hidden;
+    .views-charts-task {
+        width: 50%;
+        float: left;
+        margin-bottom: 10px;
+        .views-chats-times {
+            top: 20px;
+        }
+    }
+}
+
+.views-node-name {
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+.views-model-load {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+// 项目设置
+.views-project-setting {
+    display: inline-block;
+    width: 95px;
+    text-align: right;
+}

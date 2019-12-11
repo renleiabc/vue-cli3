@@ -1,0 +1,14 @@
+{
+  "description": "基于element、权限、国际化的vue nav组件",
+  "keywords": [
+    "Vue",
+    "Element",
+    "i18n",
+    "vue-router"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "vue-ele-nav",
+  "private": true, 
+  "version": "1.5.6"
+}

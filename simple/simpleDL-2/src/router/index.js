@@ -1,0 +1,84 @@
+/*
+ * @Author: Liang Liang
+ * @Date: 2018-07-06 17:13:20
+ * @LastEditors: Liang Liang
+ * @LastEditTime: 2018-07-06 17:13:20
+ * @Description:
+ */
+/*
+ * @LastEditors: aFei
+ * @LastEditTime: 2018-08-22 15:11:12
+ */
+import Vue from 'vue'
+import Router from 'vue-router'
+import main from '@/views/main/main'
+import login from '@/views/login/index'
+import error from '@/views/error/index'
+import systemMonitoring from './systemMonitoring'
+import systemManagement from './systemManagement'
+import userManagement from './userManagement'
+import clusterMonitoring from './clusterMonitoring'
+import home from './home'
+import projectSpace from './projectSpace'
+// import personalSpace from './personalSpace'
+import storageManagement from './storageManagement'
+import imageManagement from './imageManagement'
+import caseCenter from './caseCenter'
+import keyManagement from './keyManagement'
+// import researchForum from './researchForum'
+// import help from './help'
+import setting from './setting'
+
+Vue.use(Router)
+export default new Router({
+  linkActiveClass: 'active-link',
+  mode: 'history',
+  routes: [{
+    path: '/login',
+    name: 'login',
+    beforeEnter (to, from, next) {
+      sessionStorage.clear()
+      next()
+    },
+    component: login
+  },
+  {
+    path: '/',
+    name: 'main',
+    component: main,
+    redirect: to => {
+      if (JSON.parse(sessionStorage.getItem('isLogin')) === true) {
+        const navInformation = JSON.parse(sessionStorage.getItem('navInformation'))
+        return navInformation[0].children.length > 0 ? navInformation[0].children[0].path : navInformation[0].path
+      } else {
+        return '/login'
+      }
+    },
+    children: [
+      systemMonitoring,
+      systemManagement,
+      userManagement,
+      clusterMonitoring,
+      home,
+      projectSpace,
+      // personalSpace,
+      storageManagement,
+      imageManagement,
+      keyManagement,
+      caseCenter,
+      // researchForum,
+      // help,
+      setting
+    ]
+  },
+  {
+    path: '/error',
+    name: 'error',
+    component: error
+  },
+  {
+    path: '*',
+    redirect: '/error'
+  }
+  ]
+})
