@@ -2,12 +2,13 @@
  * @Author: renlei
  * @Date: 2020-06-11 18:13:56
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-11 18:38:51
+ * @LastEditTime: 2020-06-15 13:57:17
  * @Description: 
 -->
 <template>
-  <div>
+  <div class="chart">
     <div style="width: 800px; height: 300px;" ref="chart"></div>
+    <div style="width: 800px; height: 300px;" ref="bar"></div>
   </div>
 </template>
 
@@ -20,6 +21,7 @@ export default {
   created() {},
   mounted() {
     const chartInstance = echarts.init(this.$refs.chart);
+    const barInstance = echarts.init(this.$refs.bar);
     var option = (option = {
       title: {
         text: '堆叠区域图'
@@ -65,6 +67,7 @@ export default {
           type: 'line',
           stack: '总量',
           areaStyle: {},
+          smooth: true,
           data: [120, 132, 101, 134, 90, 230, 210]
         },
         {
@@ -72,6 +75,7 @@ export default {
           type: 'line',
           stack: '总量',
           areaStyle: {},
+          smooth: true,
           data: [220, 182, 191, 234, 290, 330, 310]
         },
         {
@@ -105,9 +109,56 @@ export default {
     });
 
     chartInstance.setOption(option);
+    const optionBar = {
+      color: ['#3398DB'],
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          // 坐标轴指示器，坐标轴触发有效
+          type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          axisTick: {
+            alignWithLabel: true
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value'
+        }
+      ],
+      series: [
+        {
+          name: '直接访问',
+          type: 'bar',
+          barWidth: '60%',
+          data: [10, 52, 200, 334, 390, 330, 220]
+        }
+      ]
+    };
+    barInstance.setOption(optionBar);
   },
   methods: {},
   components: {},
   computed: {}
 };
 </script>
+<style lang="scss">
+.chart {
+  display: flex;
+}
+.chart > div {
+  flex: 1;
+}
+</style>

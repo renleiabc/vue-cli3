@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2020-06-11 18:39:35
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-11 18:39:35
+ * @LastEditTime: 2020-06-15 11:42:47
  * @Description:
  */
 // 文件路径 @/lib/echarts.js 自行配置
@@ -19,4 +19,6 @@ require('echarts/lib/component/title');
 require('echarts/lib/component/dataZoom');
 require('echarts/lib/component/markPoint');
 require('echarts/lib/component/markLine');
+require('echarts/lib/component/legend');
+require('echarts/lib/component/toolbox');
 export default echarts;
