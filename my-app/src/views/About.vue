@@ -2,8 +2,8 @@
  * @Author: renlei
  * @Date: 2020-06-11 18:13:56
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-15 13:57:17
- * @Description: 
+ * @LastEditTime: 2020-06-24 10:45:12
+ * @Description:
 -->
 <template>
   <div class="chart">
@@ -22,7 +22,7 @@ export default {
   mounted() {
     const chartInstance = echarts.init(this.$refs.chart);
     const barInstance = echarts.init(this.$refs.bar);
-    var option = (option = {
+    const option = {
       title: {
         text: '堆叠区域图'
       },
@@ -106,8 +106,7 @@ export default {
           data: [820, 932, 901, 934, 1290, 1330, 1320]
         }
       ]
-    });
-
+    };
     chartInstance.setOption(option);
     const optionBar = {
       color: ['#3398DB'],

@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2020-06-11 18:10:33
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-23 17:44:12
+ * @LastEditTime: 2020-06-24 11:15:11
  * @Description:
  */
 
@@ -36,8 +36,7 @@ const routes = [
   {
     path: '/test',
     name: 'Test',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Test.vue'),
+    component: () => import(/* webpackChunkName: "test" */ '../views/Test.vue'),
     meta: {
       title: '测试'
     }
@@ -45,7 +44,7 @@ const routes = [
   {
     path: '/class',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Class.vue'),
+      import(/* webpackChunkName: "class" */ '../views/Class.vue'),
     meta: {
       title: '类型',
       keepAlive: true
@@ -55,7 +54,7 @@ const routes = [
         name: 'Class',
         path: '',
         component: () =>
-          import(/* webpackChunkName: "about" */ '../views/ClassChild.vue'),
+          import(/* webpackChunkName: "class" */ '../views/ClassChild.vue'),
         meta: {
           title: '类型',
           keepAlive: true
@@ -65,7 +64,7 @@ const routes = [
         name: 'ClassChild',
         path: 'classChild/:id',
         component: () =>
-          import(/* webpackChunkName: "about" */ '../views/ClassChildId.vue'),
+          import(/* webpackChunkName: "class" */ '../views/ClassChildId.vue'),
         meta: {
           title: '详情',
           keepAlive: true
@@ -89,5 +88,30 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+// 根据不同的用户角色，去过滤不同的路由链接
 
+export const handleRouterFilter = (arr, role) => {
+  const showList = arr.filter((items) => {
+    if (items.limit.includes(role)) {
+      if (items.subs) {
+        const firstItems = items.subs.filter((item) => {
+          if (item.limit.includes(role)) {
+            if (item.subs) {
+              const secondItem = item.subs.filter((sub) => {
+                return sub.limit.includes(role);
+              });
+              item.subs = secondItem;
+              return secondItem;
+            }
+          }
+          return item.limit.includes(role);
+        });
+        items.subs = firstItems;
+        return items;
+      }
+    }
+    return items.limit.includes(role);
+  });
+  return showList;
+};
 export default router;

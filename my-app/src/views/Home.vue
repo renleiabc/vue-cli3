@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2020-06-09 09:42:43
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-09 18:18:25
+ * @LastEditTime: 2020-06-29 15:32:32
  * @Description: 
 -->
 <template>
@@ -11,6 +11,8 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <div>{{ message | capitalize }}</div>
     <div>{{ num | addNum(10) }}</div>
+    <div>{{ reversedMessage() }}</div>
+    <div>{{ reversedMessage1 }}</div>
   </div>
 </template>
 
@@ -33,6 +35,16 @@ export default {
       num: 3
     };
   },
+  computed: {
+    // 计算属性的 getter
+    reversedMessage1: function() {
+      // `this` 指向 vm 实例
+      return this.message
+        .split('')
+        .reverse()
+        .join('');
+    }
+  },
   created() {
     this.init();
     this.handleGet();
@@ -43,6 +55,12 @@ export default {
     this.handleFind();
   },
   methods: {
+    reversedMessage: function() {
+      return this.message
+        .split('')
+        .reverse()
+        .join('');
+    },
     handleForEach() {
       const arr = [];
       const arr1 = arr.forEach((item) => {
@@ -105,13 +123,13 @@ export default {
           b: 21
         }
       };
-      let cloneObj1 = Object.assign({}, obj1);
+      const cloneObj1 = Object.assign({}, obj1);
       cloneObj1.a = 'changed';
       cloneObj1.b.a = 'chnaged';
       console.log(obj1.a);
       console.log(obj1.b.a);
-      var obj = { a: 1, arr: [2, 3] };
-      var shallowObj = Object.assign({}, obj);
+      const obj = { a: 1, arr: [2, 3] };
+      const shallowObj = Object.assign({}, obj);
       //当一个对象属性的引用值改变时将导致另一个也改变
       shallowObj.arr[1] = 5;
       obj.arr[1]; // = 5
@@ -132,11 +150,11 @@ export default {
       }
       // console.log(flightHandler);
       // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
-      var url =
+      const url =
         'https://api.thinkpage.cn/v3/weather/now.json?location=beijing&ts=1443079775&ttl=30&uid=[your_uid]&sig=[your_signature]&callback=' +
         flightHandler;
       // 创建script标签，设置其属性
-      var script = document.createElement('script');
+      const script = document.createElement('script');
       script.setAttribute('src', url);
       // 把script标签加入head，此时调用开始
       document.getElementsByTagName('head')[0].appendChild(script);

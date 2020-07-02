@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2020-06-11 18:10:33
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-23 18:12:14
+ * @LastEditTime: 2020-06-29 15:33:19
  * @Description: 
 -->
 <template>
@@ -13,17 +13,17 @@
         <el-aside width="200px"> </el-aside>
         <el-container>
           <el-main>
-            <!--  <transition name="fade" mode="out-in">
-              <router-view></router-view>
-            </transition> -->
             <transition name="fade" mode="out-in">
+              <router-view></router-view>
+            </transition>
+            <!-- <transition name="fade" mode="out-in">
               <keep-alive>
                 <router-view v-if="$route.meta.keepAlive"></router-view>
               </keep-alive>
             </transition>
             <transition name="fade" mode="out-in">
               <router-view v-if="!$route.meta.keepAlive"></router-view>
-            </transition>
+            </transition> -->
           </el-main>
           <el-footer>Footer</el-footer>
         </el-container>
@@ -68,11 +68,11 @@ body {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
 }
 
-body > .el-container {
+body .el-container {
   margin-bottom: 0px;
+  height: 100%;
 }
 
 ul li {

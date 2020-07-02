@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2020-06-17 10:58:14
  * @LastEditors: renlei
- * @LastEditTime: 2020-06-17 19:50:02
+ * @LastEditTime: 2020-06-24 10:30:14
  * @Description: 面试题界面
 -->
 <template>
@@ -26,14 +26,14 @@ export default {
     console.log(this.repeatStringNumTimes('abc', 3));
     console.log(this.isPrime(7));
     console.log(this.prinmeN(100));
-    var arr = ['a', 'g', 'q', 'd', 'a', 'e', 'q'];
+    const arr = ['a', 'g', 'q', 'd', 'a', 'e', 'q'];
     console.log(this.handleUnique(arr));
     console.log(this.handleCapitalized('205402002103'));
-    var arr1 = [1, 2, 3, 4, 5, 6, 7, 0.9, 11];
+    const arr1 = [1, 2, 3, 4, 5, 6, 7, 0.9, 11];
 
-    var min = Math.min.apply(null, arr1);
+    const min = Math.min.apply(null, arr1);
 
-    var max = Math.max.apply(null, arr1);
+    const max = Math.max.apply(null, arr1);
 
     console.log(`min:${min} max:${max}`);
   },
@@ -54,7 +54,7 @@ export default {
       const max = Math.max(...arr);
       console.log(JSON.stringify(max));
       const obj1 = {};
-      for (let key in obj) {
+      for (const key in obj) {
         if (obj[key] === max) {
           obj1[key] = max;
         }
@@ -74,16 +74,16 @@ export default {
         }
         document.getElementById('test-node').appendChild(myUl);
       }
-      var fun = function() {
+      const fun = function() {
         this.name = 'peter';
         return 'jack';
       };
 
-      var p = new fun();
+      const p = new fun();
       console.log(p.name);
     },
     handlePrototype() {
-      var fun = function() {};
+      const fun = function() {};
       fun.prototype = {
         info: {
           name: 'peter',
@@ -91,8 +91,8 @@ export default {
         }
       };
 
-      var a = new fun();
-      var b = new fun();
+      const a = new fun();
+      const b = new fun();
 
       a.info.name = 'jack';
       b.info.name = 'tom';
@@ -126,8 +126,8 @@ export default {
       } else if (number % 2 === 0) {
         return false;
       }
-      var squareRoot = Math.sqrt(number); //平方根，比如Math.sqrt(9)为3
-      for (var i = 3; i <= squareRoot; i += 2) {
+      const squareRoot = Math.sqrt(number); //平方根，比如Math.sqrt(9)为3
+      for (let i = 3; i <= squareRoot; i += 2) {
         if (number % i === 0) {
           return false;
         }
@@ -136,8 +136,8 @@ export default {
     },
     //输出n内的所有质数
     prinmeN(n) {
-      var flag = 0;
-      var result = [];
+      let flag = 0;
+      let result = [];
       if (n == 0 || n == 1) {
         result = [];
       } else if (n == 2) {
@@ -146,8 +146,8 @@ export default {
         result = [2, 3];
       } else {
         result.push(2, 3);
-        for (var i = 5; i <= n; i++) {
-          for (var j = 2; j <= Math.sqrt(i); j++) {
+        for (let i = 5; i <= n; i++) {
+          for (let j = 2; j <= Math.sqrt(i); j++) {
             if (i % j == 0) {
               flag = 1;
               break;
@@ -164,8 +164,8 @@ export default {
     },
     //数组去重
     handleUnique(arr) {
-      var obj = {};
-      var arr1 = [];
+      const obj = {};
+      const arr1 = [];
       for (let i = 0; i < arr.length; i++) {
         if (!obj[arr[i]]) {
           arr1.push(arr[i]);
@@ -179,14 +179,14 @@ export default {
       if (!/^([1-9]\d*)/.test(n)) {
         return '非法数据';
       }
-      var unit = '千百十亿千百十万千百十个';
+      let unit = '千百十亿千百十万千百十个';
       if (n.length > unit.length) {
         return '数据过长';
       }
-      var newStr = '';
-      var nlength = n.length;
+      let newStr = '';
+      const nlength = n.length;
       unit = unit.substr(unit.length - nlength);
-      for (var i = 0; i < nlength; i++) {
+      for (let i = 0; i < nlength; i++) {
         newStr += '零一二三四五六七八九'.charAt(n[i]) + unit.charAt(i);
       }
       newStr = newStr.substr(0, newStr.length - 1);
