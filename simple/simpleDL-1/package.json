@@ -14,7 +14,7 @@
     "axios": "0.18.0",
     "element-ui": "2.4.3",
     "nprogress": "^0.2.0",
-    "qs": "6.5.2",
+    "qs": "6.5.3",
     "vue": "2.6.10",
     "vue-ele-nav": "^1.6.0",
     "vue-language-switch": "1.0.10",
